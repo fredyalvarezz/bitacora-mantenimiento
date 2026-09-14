@@ -1,0 +1,15 @@
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.empty-state__title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.empty-state__message {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}

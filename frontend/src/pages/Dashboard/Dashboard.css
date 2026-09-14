@@ -1,0 +1,29 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.simple-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  gap: 10px;
+}
+.simple-list__item:last-child {
+  border-bottom: none;
+}
+.simple-list__link {
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+}

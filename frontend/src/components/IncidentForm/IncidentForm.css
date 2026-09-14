@@ -1,0 +1,12 @@
+.incident-form__readonly {
+  background-color: var(--color-bg);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+.incident-form__readonly p {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+.incident-form__readonly p:last-child {
+  margin-bottom: 0;
+}

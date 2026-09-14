@@ -1,0 +1,28 @@
+.equipment-card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.equipment-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+.equipment-card__title {
+  font-size: 1rem;
+}
+.equipment-card__detail {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+.equipment-card__actions {
+  margin-top: 10px;
+}
+.equipment-card__mine {
+  align-self: flex-start;
+}

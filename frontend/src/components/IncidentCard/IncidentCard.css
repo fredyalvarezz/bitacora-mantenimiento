@@ -1,0 +1,28 @@
+.incident-card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.incident-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+.incident-card__title {
+  font-size: 1rem;
+}
+.incident-card__detail {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+.incident-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
