@@ -25,13 +25,6 @@
   margin-bottom: 24px;
   font-size: 0.9rem;
 }
-.login__hint {
-  margin-top: 16px;
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-  text-align: center;
-  line-height: 1.6;
-}
 
 @media (max-width: 480px) {
   .login__form {

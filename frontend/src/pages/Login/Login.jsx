@@ -68,13 +68,6 @@ const Login = () => {
           {cargando ? "Ingresando..." : "Ingresar"}
         </button>
 
-        <p className="login__hint">
-          Usuarios demo: admin@demo.com / admin123 (Administrador)
-          <br />
-          juan@demo.com / tecnico123 (Tecnico)
-          <br />
-          carlos@demo.com / empleado123 (Empleado de oficina)
-        </p>
       </form>
     </div>
   );
