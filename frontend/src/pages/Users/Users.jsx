@@ -7,7 +7,7 @@ import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Modal from "../../components/Modal/Modal";
 import { userService } from "../../services/userService";
 import { useAuth } from "../../context/AuthContext";
-import { formatearFecha, claseActivo } from "../../utils/constants";
+import { formatearFecha, claseActivo, traducirRol } from "../../utils/constants";
 import "./Users.css";
 
 const Users = () => {
