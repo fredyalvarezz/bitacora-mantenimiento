@@ -220,11 +220,10 @@ export const localIncidentService = {
       incidencias = incidencias.filter((i) => i.creadoPor === usuarioActual._id);
     }
 
-    let equiposBase = equipos;
-    if (usuarioActual?.rol === "TECHNICIAN") {
-      const idsEquipo = [...new Set(incidencias.map((i) => i.equipo))];
-      equiposBase = equipos.filter((e) => idsEquipo.includes(e._id));
-    }
+    // Los equipos son inventario general de la empresa: se cuentan igual para todos
+    // los roles (coherente con que Equipos le muestra a TECHNICIAN todo el inventario,
+    // no solo lo suyo). Lo que SI cambia por rol son las incidencias, arriba.
+    const equiposBase = equipos;
 
     const incidenciasRecientes = [...incidencias]
       .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))

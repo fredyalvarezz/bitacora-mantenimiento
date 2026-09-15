@@ -217,12 +217,10 @@ export const getDashboardStats = async (req, res, next) => {
 
     const incidenciasDelUsuario = await Incident.find(filtroIncidentes);
 
-    // Determina que equipos "cuentan": un TECHNICIAN solo ve los suyos; ADMIN y EMPLOYEE ven todos
-    let filtroEquipos = {};
-    if (usuario.rol === "TECHNICIAN") {
-      const idsEquipo = [...new Set(incidenciasDelUsuario.map((i) => i.equipo.toString()))];
-      filtroEquipos = { _id: { $in: idsEquipo } };
-    }
+    // Los equipos son inventario general de la empresa: se cuentan igual para todos
+    // los roles (coherente con que Equipos le muestra a TECHNICIAN todo el inventario,
+    // no solo lo suyo). Lo que SI cambia por rol son las incidencias, arriba.
+    const filtroEquipos = {};
 
     const contarPorEstado = (estado) =>
       incidenciasDelUsuario.filter((i) => i.estado === estado).length;
